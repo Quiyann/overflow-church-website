@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Overflow Church</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    overflow-x: hidden;
+    background: linear-gradient(#0099ff, #66ccff);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,80,0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd59;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(#0066cc, #66ccff);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    animation: floatText 3s ease-in-out infinite alternate;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+.hero a {
+    background: #33ccff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero a:hover {
+    background: #00bfff;
+    transform: translateY(-5px);
+}
+
+/* Floating Cross */
+.cross {
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    top: 10%;
+    right: 10%;
+    animation: floatCross 4s ease-in-out infinite alternate;
+}
+
+/* Wave Animation */
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    bottom: 0;
+    left: -50%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 100%;
+    animation: waveMove 6s infinite linear;
+}
+
+.wave:nth-child(2) {
+    background: rgba(255,255,255,0.2);
+    animation-duration: 8s;
+    bottom: 10px;
+}
+
+.wave:nth-child(3) {
+    background: rgba(255,255,255,0.1);
+    animation-duration: 10s;
+    bottom: 20px;
+}
+
+/* Sections */
+section {
+    padding: 100px 50px;
+}
+
+.about, .services, .contact {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h2, .services h2, .contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #003366;
+}
+
+.about p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #003366;
+}
+
+/* Service Times */
+.services .service-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.service-list .service-item {
+    background: #0099ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.5s ease, background 0.5s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    background: #33ccff;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 18px;
+}
+
+/* Contact */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact button {
+    background: #0066cc;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background: #33ccff;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #003366;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes waveMove {
+    0% { transform: translateX(0) rotate(0deg); }
+    100% { transform: translateX(50%) rotate(360deg); }
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes floatCross {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    section {
+        padding: 70px 20px;
+    }
+}
+</style>
+</head>
+<body>
+<nav>
+    <div class="logo">The Overflow Church</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="cross">✝</div>
+    <h1>Welcome to The Overflow Church</h1>
+    <p>Building faith, hope, and community together.</p>
+    <a href="#contact">Join Us</a>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+</section>
+
+<section class="about" id="about">
+    <h2>About Our Church</h2>
+    <p>The Overflow Church is a place where everyone is welcome. We are committed to helping our community grow spiritually, emotionally, and socially through faith, love, and service. Join us to celebrate, learn, and make a difference together.</p>
+</section>
+
+<section class="services" id="services">
+    <h2>Service Times</h2>
+    <div class="service-list">
+        <div class="service-item">
+            <h3>Sunday Worship</h3>
+            <p>8:00 AM & 10:30 AM</p>
+        </div>
+        <div class="service-item">
+            <h3>Bible Study</h3>
+            <p>Wednesday 7:00 PM</p>
+        </div>
+        <div class="service-item">
+            <h3>Prayer Meeting</h3>
+            <p>Friday 6:30 PM</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2026 The Overflow Church. All rights reserved.
+</footer>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

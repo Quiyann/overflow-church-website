@@ -1,0 +1,98 @@
+/* Gradient Blue Theme for The Overflow Church */
+
+/* Body background gradient */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: linear-gradient(to bottom, #003366, #0055a5); /* Darker blue gradient */
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 50, 0.7); /* Dark semi-transparent navy */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #00ccff; /* Bright accent blue */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #004080, #0066cc); /* Darker-to-medium blue */
+    color: #fff;
+}
+
+/* Hero buttons */
+.hero a {
+    background: #0080ff; /* Vibrant blue button */
+    color: #fff;
+}
+
+.hero a:hover {
+    background: #005fa3; /* Darker hover effect */
+}
+
+/* Sections */
+section {
+    padding: 100px 50px;
+    background: linear-gradient(to bottom, #003366, #004d99); /* Darker blue gradient sections */
+}
+
+.about h2, .services h2, .contact h2 {
+    color: #cce6ff; /* Light blue headings */
+}
+
+.about p, .services .service-item p {
+    color: #e6f2ff; /* Slightly lighter text */
+}
+
+/* Service cards */
+.service-list .service-item {
+    background: #0055a5; /* Dark blue card */
+    color: #fff;
+}
+
+.service-item:hover {
+    background: #0073cc; /* Slightly brighter hover */
+}
+
+/* Contact button */
+.contact button {
+    background: #0080ff;
+    color: #fff;
+}
+
+.contact button:hover {
+    background: #005fa3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #00264d; /* Dark navy footer */
+    color: #cce6ff;
+}
